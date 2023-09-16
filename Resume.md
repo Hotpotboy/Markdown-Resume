@@ -50,8 +50,11 @@
 ## <img src="assets/briefcase-solid.svg" width="30px"> 工作经历
 
 - **字节跳动，视频架构-云渲染，Android工程师，2022.12~至今**
+   - 负责vamcamera**全景VR视频**项目的研发工作；
+   - 负责云游戏Android侧，埋点SDK的研发工作；
+      - 整体埋点上报成功率达到99.99%<font color=gray>(去除主动丢弃)</font>;	
+      - 可稳定支撑日均千万量级的上传埋点事件；
 
-​		
 
 
 
@@ -92,6 +95,16 @@
    
 
 ## <img src="assets/project-diagram-solid.svg" width="30px"> 项目经历
+
+- **VamCamera全景VR视频项目**
+
+​		VamCamera全景VR视频，具有**低带宽、低延迟**的优势；
+
+​		其核心流程：根据实时上传的头显位姿，动态抓取VR场景中指定FOV范围的画面，并利用llama协议，对面进行编码传输至客户端。		<img src="assets/vamcamera_simple_flow.png" width="1000px">		
+
+​		  只传输全景视频中的一部分区域，是VamCamera低宽带、低延迟的关键。
+
+​		
 
 - **Android EGLSession项目**
 
