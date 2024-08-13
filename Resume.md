@@ -18,7 +18,7 @@
 
  - 男，1990 年出生
 
- - 求职意向：Android研发工程师(AR、OpenGL方向)，Android Framework工程师，渲染引擎工程师
+ - 求职意向：Android研发工程师(元宇宙、OpenGL方向)，Android Framework工程师，渲染引擎工程师
 
  - 工作经验：10+ 年
 
@@ -26,15 +26,13 @@
 
  - 自我评价：
 
-   - 8年Android开发经验；丰富的Android架构经验；
+   - 8年+Android开发经验；丰富的Android架构经验，丰富的Android多媒体应用项目<font color=gray>(Camera、视频直播串流、Surface)</font>经验；
 
-   - 熟悉Android源码，理解相机、SuraceView等相关原理；属性JVM的部分流程；
+   - 熟悉C++语言；拥有完整的基于cmake跨平台项目经验，熟悉Android NDK，拥有Win32应用开发经验；
 
-   - 拥有完整的AR项目开发经验，熟悉ARKit/ARCore、CV、渲染等AR相关技术；
+   - 熟悉OpenGL ES编程；熟悉GLSL脚本；熟悉MVP、3D向量等图形学基础知识；拥有GPU项目级开发经验；
 
-   - 熟悉OpenGL ES编程，拥有GPU项目级开发经验；
-
-   - 掌握Java编程，拥有C++项目级的编程经验；
+   - 拥有完整的XR项目开发经验；ARCore & OpenXR With Pico；
 
      
 
@@ -50,10 +48,30 @@
 ## <img src="assets/briefcase-solid.svg" width="30px"> 工作经历
 
 - **字节跳动，视频架构-云渲染，Android工程师，2022.12~至今**
-   - 负责vamcamera**全景VR视频**项目的研发工作；
-   - 负责云游戏Android侧，埋点SDK的研发工作；
-      - 整体埋点上报成功率达到99.99%<font color=gray>(去除主动丢弃)</font>;	
-      - 可稳定支撑日均千万量级的上传埋点事件；
+   - XRAppOS工程架构整体设计与演进，正常情况下可支撑10名RD的日常工作；
+   
+      - XRAppOS是一款以拓展XR业务场景，整合XR多栈技术为目标的架构系统，其长期演进目标是成为下一代OS；
+   
+      - 整体架构分为Session<font color=gray>(API、生命周期)</font>、Scene<font color=gray>(pipeline, tensorflow,render engine)</font>、System<font color=gray>(platform、os、cg)</font>三层；
+   
+      - 内置自研渲染引擎，实现渲染管线动态化、统一渲染API<font color=gray>(可适配Unreal等主流游戏引擎，可适配OpenGL、D3D11、Vulkan等主流图形库)</font>两大核心能力；
+   
+      - 申请了一项Android平台共享纹理相关的**专利**；
+   
+      - 支撑团队大空间VR、全景视频、AR特效等偏向于创新的业务探索与落地；
+   
+         
+   
+   - 云游戏串流业务日常迭代；Android/Windows端拉流SDK迭代眼睛
+   
+      - 基于bytertc及操作系统本身，实现云游戏画面拉流 & 游戏交互两大核心功能；
+   
+         
+   
+   - 团队基础设施建设
+   
+      - 自研埋点上报SDK；整体埋点上报成功率达到99.99%<font color=gray>(去除主动丢弃)</font>;	可稳定支撑日均千万量级的上传埋点事件；
+      - Android侧云游戏&云手机 SDK CI集成链路搭建；基于gradle + kotlin，从0到1搭建CI编译链路；整个编译链路兼容cp or cg、线上or 线下、有无插件 **8 种**flovar的编译产物；
 
 
 
@@ -62,7 +80,13 @@
 
    - 对手机淘宝跨端**AR**工程架构进行整体设计与演进；
 
-   - 基于AR工程架构，研发落地电商 + AR领域的业务需求；
+     
+
+   - 基于AR工程架构，支撑电商 + AR领域的业务需求；
+
+     - 与算法同学共同实现了AR美妆、AR试鞋、AR试表、AR试眼镜、AR家电、数字藏品6大核心业务；
+
+       
 
    - 对手淘扫一扫模块进行日常迭代与维护；
 
@@ -179,10 +203,6 @@
 ​         3. 对接渲染引擎，抽象渲染API，落地冰箱、洗衣机等3D模型的渲染能力；
 
 ​         4. 通过3D坐标、3D向量等图形学基础知识，实现对冰箱、洗衣机等3D模型拖拽、缩放等交互功能；
-
-
-
-
 
 
 
