@@ -26,14 +26,19 @@
 
  - 自我评价：
 
-   - 8年+Android开发经验；丰富的Android架构经验，丰富的Android多媒体应用项目<font color=gray>(Camera、视频直播串流、Surface)</font>经验；
+   - 8年+Android开发<font color=gray>(Camera、视频直播串流、Surface、系统APP)</font>经验；丰富的架构经验；
 
    - 熟悉C++语言；拥有完整的基于cmake跨平台项目经验，熟悉Android NDK，拥有Win32应用开发经验；
 
    - 熟悉OpenGL ES编程；熟悉GLSL脚本；熟悉MVP、3D向量等图形学基础知识；拥有GPU项目级开发经验；
 
-   - 拥有完整的XR项目开发经验；ARCore & OpenXR With Pico；
+   - 拥有完整的XR项目开发经验；
 
+     - 熟悉ARCore；
+     - 熟悉OpenXR，了解ATW等补帧机制;
+     - 熟悉ERP、CAP/EAC等常见的VR场景中全景投影原理；
+     
+     
      
 
 
@@ -48,13 +53,16 @@
 ## <img src="assets/briefcase-solid.svg" width="30px"> 工作经历
 
 - **字节跳动，视频架构-云渲染，Android工程师，2022.12~至今**
-   - XRAppOS工程架构整体设计与演进，正常情况下可支撑10名RD的日常工作；
+  
+   - XRAppOS工程架构整体设计与演进；
    
       - XRAppOS是一款以拓展XR业务场景，整合XR多栈技术为目标的架构系统，其长期演进目标是成为下一代OS；
    
       - 整体架构分为Session<font color=gray>(API、生命周期)</font>、Scene<font color=gray>(pipeline, tensorflow,render engine)</font>、System<font color=gray>(platform、os、cg)</font>三层；
    
-      - 内置自研渲染引擎，实现渲染管线动态化、统一渲染API<font color=gray>(可适配Unreal等主流游戏引擎，可适配OpenGL、D3D11、Vulkan等主流图形库)</font>两大核心能力；
+      - 内置自研渲染引擎，实现渲染管线动态化、统一渲染API<font color=gray>(可适配Unreal等主流游戏引擎，OpenGL、D3D11、Vulkan等主流图形库)</font>两大核心能力；
+   
+      - 内置初级推理引擎框架<font color=gray>(落地演进中)</font>，可运行最简单的NN模型；
    
       - 申请了一项Android平台共享纹理相关的**专利**；
    
@@ -62,16 +70,25 @@
    
          
    
-   - 云游戏串流业务日常迭代；Android/Windows端拉流SDK迭代眼睛
+   - 云游戏串流业务日常迭代；
    
-      - 基于bytertc及操作系统本身，实现云游戏画面拉流 & 游戏交互两大核心功能；
+      - AOSP系统级推流APP游戏启动耗时优化;
    
-         
+         - 以C++ elf文件替换游戏启动shell脚本，降低游戏启动耗时(2s-->1s左右);
+         - elf文件直接依赖AOSP源码中的binder头文件，项目产物与AOSP中system/bin中可执行文件类似;
+   
+      - Android/Windows端拉流SDK迭代演进
+   
+         - 基于bytertc及操作系统本身，实现云游戏画面拉流 & 游戏交互两大核心功能；
+   
+          
    
    - 团队基础设施建设
    
-      - 自研埋点上报SDK；整体埋点上报成功率达到99.99%<font color=gray>(去除主动丢弃)</font>;	可稳定支撑日均千万量级的上传埋点事件；
-      - Android侧云游戏&云手机 SDK CI集成链路搭建；基于gradle + kotlin，从0到1搭建CI编译链路；整个编译链路兼容cp or cg、线上or 线下、有无插件 **8 种**flovar的编译产物；
+      - 自研埋点上报SDK；
+        - 整体埋点上报成功率达到99.99%<font color=gray>(去除主动丢弃)</font>;	可稳定支撑日均千万量级的上传埋点事件；
+        - 其中C++版本自研埋点，同时适配Windows平台与鸿蒙平台，初步实现了跨平台能力；
+      - Android侧云游戏&云手机 SDK CI集成链路搭建；基于gradle + kotlin，从0到1搭建CI编译链路；整个编译链路兼容cp or cg、线上or 线下、有无插件 **8 种**flovar的编译产物，具有一定的复杂性；
 
 
 
