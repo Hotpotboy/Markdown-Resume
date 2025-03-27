@@ -35,7 +35,7 @@
    - 拥有完整的XR项目开发经验；
 
      - 熟悉ARCore；
-     - 熟悉OpenXR，了解ATW等补帧机制;
+     - 熟悉OpenXR，拥有runtime开发经验;
      - 熟悉ERP、CAP/EAC等常见的VR场景中全景投影原理；
      
      
@@ -60,9 +60,11 @@
    
       - 整体架构分为Session<font color=gray>(API、生命周期)</font>、Scene<font color=gray>(pipeline, tensorflow,render engine)</font>、System<font color=gray>(platform、os、cg)</font>三层；
    
+      - 自研openxr runtime库，负责交互模块<font color=gray>(interaction & action & space)</font>的研发工作;
+   
       - 内置自研渲染引擎，实现渲染管线动态化、统一渲染API<font color=gray>(可适配Unreal等主流游戏引擎，OpenGL、D3D11、Vulkan等主流图形库)</font>两大核心能力；
    
-      - 内置初级推理引擎框架<font color=gray>(落地演进中)</font>，可运行最简单的NN模型；
+      - 内置初级推理引擎框架<font color=gray>(落地演进中)</font>，可运行简单的NN模型；
    
       - 申请了一项Android平台共享纹理相关的**专利**；
    
