@@ -26,16 +26,16 @@
 
  - 自我评价：
 
-   - 8年+Android开发<font color=gray>(Camera、视频直播串流、Surface、系统APP)</font>经验；丰富的架构经验；
+   - 8年+Android开发<font color=gray>(Camera、视频直播串流、Surface、Framework)</font>经验；丰富的架构经验；
 
    - 熟悉C++语言；拥有完整的基于cmake跨平台项目经验，熟悉Android NDK，拥有Win32应用开发经验；
 
-   - 熟悉OpenGL ES编程；熟悉GLSL脚本；熟悉MVP、3D向量等图形学基础知识；拥有GPU项目级开发经验；
+   - 熟悉OpenGL ES、Vulkan编程；熟悉GLSL脚本；熟悉MVP、3D向量等图形学基础知识；拥有GPU项目级开发经验；
 
    - 拥有完整的XR项目开发经验；
 
      - 熟悉ARCore；
-     - 熟悉OpenXR，拥有runtime开发经验;
+     - 熟悉OpenXR，阅读过monado源码拥有runtime开发经验;
      - 熟悉ERP、CAP/EAC等常见的VR场景中全景投影原理；
      
      
@@ -56,43 +56,50 @@
   
    - XRAppOS工程架构整体设计与演进；
    
-      - XRAppOS是一款以拓展XR业务场景，整合XR多栈技术为目标的架构系统，其长期演进目标是成为下一代OS；
+      - XRAppOS是一款以拓展XR业务场景，整合XR多栈技术为目标的架构系统；
    
-      - 整体架构分为Session<font color=gray>(API、生命周期)</font>、Scene<font color=gray>(pipeline, tensorflow,render engine)</font>、System<font color=gray>(platform、os、cg)</font>三层；
+      - 整个架构用以支撑团队大空间VR、全景视频、AR特效等偏向于创新的业务探索与落地；
    
-      - 自研openxr runtime库，负责交互模块<font color=gray>(interaction & action & space)</font>的研发工作;
+      - 内置自研**openxr runtime库**，负责交互、合成器2大核心模块的开发；
    
-      - 内置自研渲染引擎，实现渲染管线动态化、统一渲染API<font color=gray>(可适配Unreal等主流游戏引擎，OpenGL、D3D11、Vulkan等主流图形库)</font>两大核心能力；
+      - 内置自研**渲染引擎**，具有两大核心能力：
    
-      - 内置初级推理引擎框架<font color=gray>(落地演进中)</font>，可运行简单的NN模型；
+        - 渲染管线动态化；
    
-      - 申请了一项Android平台共享纹理相关的**专利**；
+        - 统一渲染API<font color=gray>(可适配Unreal等主流游戏引擎，OpenGL、D3D11、Vulkan等主流图形库)</font>；
    
-      - 支撑团队大空间VR、全景视频、AR特效等偏向于创新的业务探索与落地；
+      - 申请了1项Android平台共享纹理相关的**专利**；
+   
+      - 申请了1项关于Open XR26个手势关节数据压缩相关的**专利**；
    
          
    
    - 云游戏串流业务日常迭代；
    
-      - AOSP系统级推流APP游戏启动耗时优化;
+      - 基础架构建设
    
-         - 以C++ elf文件替换游戏启动shell脚本，降低游戏启动耗时(2s-->1s左右);
-         - elf文件直接依赖AOSP源码中的binder头文件，项目产物与AOSP中system/bin中可执行文件类似;
+         - C++跨端自研埋点上报SDK；
+            - 基于cmake实现跨端编译;
+            - 基于MMAP实现持久化能力，同时通过JNI、nativeapi适配Android、Windows、鸿蒙三大平台；
+            - 整体埋点上报成功率达到99.99%<font color=gray>(去除主动丢弃)</font>;	可稳定支撑日均千万量级的上传埋点事件；
+         - aar auto CI/CD链路搭建；
+            - 基于gradle + kotlin，从0到1搭建auto CI/CD链路；
+            - 整个编译链路兼容cp or cg、线上or 线下、有无插件 **8 种**flovar的编译产物，具有一定的复杂性；
+            - 通过javassist、fat-aar等开源sdk，完成dex文件修改、aar合并等auto CI/CD核心功能；
+   
+      - 基于Android Framework的项目开发
+   
+         - 基于**HAL**的Virtual Device模块开发，实现云端相机流、音频流注入功能；
+         - AOSP系统级推流APP游戏启动耗时优化;
+            - 以C++ elf文件替换游戏启动shell脚本，降低游戏启动耗时(2s-->1s左右);
+            - elf文件直接依赖AOSP源码中的binder头文件，项目产物与AOSP中system/bin中可执行文件类似;
    
       - Android/Windows端拉流SDK迭代演进
    
          - 基于bytertc及操作系统本身，实现云游戏画面拉流 & 游戏交互两大核心功能；
    
-          
+           
    
-   - 团队基础设施建设
-   
-      - 自研埋点上报SDK；
-        - 整体埋点上报成功率达到99.99%<font color=gray>(去除主动丢弃)</font>;	可稳定支撑日均千万量级的上传埋点事件；
-        - 其中C++版本自研埋点，同时适配Windows平台与鸿蒙平台，初步实现了跨平台能力；
-      - Android侧云游戏&云手机 SDK CI集成链路搭建；基于gradle + kotlin，从0到1搭建CI编译链路；整个编译链路兼容cp or cg、线上or 线下、有无插件 **8 种**flovar的编译产物，具有一定的复杂性；
-
-
 
 
 - **阿里巴巴，大淘宝技术-端智能，Android工程师，2017.11~2022.12(5年)**
@@ -137,39 +144,68 @@
 
    
 
-## <img src="assets/project-diagram-solid.svg" width="30px"> 项目经历
+## <img src="assets/project-diagram-solid.svg" width="30px"> 核心项目
 
-- **VamCamera全景VR视频项目**
+- **XRAppOS**
 
-​		VamCamera全景VR视频，具有**低带宽、低延迟**的优势；
+  整体架构分为三层：
 
-​		其核心流程：根据实时上传的头显位姿，动态抓取VR场景中指定FOV范围的画面，并利用llama协议，对面进行编码传输至客户端。		<img src="assets/vamcamera_simple_flow.png" width="1000px">		
+  1. Session层：对外API暴露、生命周期管控；
+  2. Scene层   ：XR场景构建、运行；
+  3. System层 ：openxr runtime，OS、硬件设备封装；
 
-​		  只传输全景视频中的一部分区域，是VamCamera低宽带、低延迟的关键。
-
-​		
-
-- **Android EGLSession项目**
-
-  负责设计整个模块以及代码开发。
+  <img src="assets/XRAppOS_Framework.jpg" width="1000px">
 
   
 
-  参考GLSurfaceView源码，重写OpenGL渲染线程，并以Sesssion的概念对渲染线程进行封装、抽象。
+- **自研OpenXR Runtime**
 
-  此模块的核心功能是ELG配置管理、渲染线程生命周期管控; 
+  此项目是XRAppOS架构中**最重要**的子模块。
+
+  目前，已经在云Windows平台上落地；云、端Android平台正在落地中。
+
+  整体架构：
+
+  <img src="assets/cloud_openxr.png" width="1000px">
 
   
 
-  与GLSurfaceView相比，此模块具有以下三个特点:
+  自研OpenXR Runtime包含2个核心模块：
 
-  + 渲染线程基于HandlerThread，消息驱动自带Looper;
+  1. 交互模块，基于InteractionProfile封装了Session、Action、Device之间的映射关系;
 
-  +  增加了surface destroy生命周期回调; 
+     <img src="assets/Sesion_ActionSet_Device_Map.jpg" width="1000px">
 
-  + EGL配置与具体视图解耦，可自由与SurfaceView、TextureView甚至普通View进行上屏、离屏渲染;
+  2. 合成模块(<font color=gray>落地中</font>)，基于Monado的核心思想，将合成器分为以下2类：
 
-    
+     1. FrontEnd Compositor，基于OpenGL ES实现，与OpenXR APP运行同一进程；
+     2. BackEnd Compositor，基于Vulkan实现，既可与OpenXR APP运行同一进程，也可运行在独立进程中；
+
+  ​       其中FrontEnd Compositor与BackEnd Compositor基于共享纹理(<font color=gray>Android平台下基于AHardwareBuffer</font>)进行通信。
+
+  <img src="assets/openxr_shared_texture.png" width="1000px">
+
+​              合成模块的整体架构，基于OpenXR的合成概念进行落地：
+
+<img src="assets/openxr_compositor_flow.png" width="500px" style="float: left; margin: 10px;">
+
+​				
+
+- **基于HAL的Virtual Device项目**
+
+​		云游戏业务中，会将AOSP镜像移植至云端设备中；为了使运行在云端APP能够正常使用相机、麦克风等功能，需要将本地设备的相机画面或者麦克风音频数据注入到云端Android Framework之中。
+
+​		Virtual Device模块是实现这类功能的关键，此模块包含2个核心功能：
+
+  1. 基于HAL，向Android Framework注册Virtual Camera、Virtual Mic等虚拟设备；
+
+  2. 接收端侧真实设备传输过来的数据流，并通过共享内存(<font color=gray>ashmem类型的hidl memory</font>)的方式转发给Android Framework;
+
+     整体架构如下所示：
+
+     <img src="assets/virtual_device.jpg" width="1000px">
+
+
 
 - **ARTry跨端工程架构项目**
 
